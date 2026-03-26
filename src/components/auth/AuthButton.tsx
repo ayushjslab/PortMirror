@@ -26,11 +26,14 @@ export default function AuthButton() {
                         className="rounded-full border border-gray-200"
                     />
                 )}
-                <div className="flex flex-col">
-                    <span className="text-sm font-medium text-gray-900">{session.user?.name}</span>
+                <div className="flex flex-col text-left">
+                    <span className="text-sm font-medium text-gray-900 leading-none">{session.user?.name}</span>
+                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-tighter mt-1 leading-none">
+                        {session.user?.plan === 'pro' ? '🚀 PRO' : '🌱 FREE'}
+                    </span>
                     <button
                         onClick={() => signOut()}
-                        className="text-xs text-red-600 hover:text-red-700 font-medium transition-colors"
+                        className="text-xs text-red-600 hover:text-red-700 font-medium transition-colors mt-2"
                     >
                         Sign Out
                     </button>
