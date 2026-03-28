@@ -13,6 +13,7 @@ import {
     ChevronRight,
     Sparkles,
     Zap,
+    Plus,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -29,6 +30,7 @@ const Sidebar = () => {
     const links = [
         { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
         { name: "Tunnels", href: "/tunnels", icon: Activity },
+        { name: "New Tunnels", href: "/new-tunnels", icon: Plus },
         { name: "API Keys", href: "/keys", icon: Key },
         { name: "Settings", href: "/settings", icon: Settings },
     ];
